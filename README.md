@@ -31,7 +31,9 @@ centos7系统
 在cloudflare中添加一个DNS解析域名指向服务器的v4地址
 
 安装wget：  yum install wget vim -y
+
 机器跑分：wget -qO- --no-check-certificate https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash
+
 一键安装脚本：wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh"; && chmod +x install.sh && bash install.sh
 
 安装中需要核对时间，输入上述域名，安装完会直接给出vmess链接地址，复制到v2ray客户端中添加即可
