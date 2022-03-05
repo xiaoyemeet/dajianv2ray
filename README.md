@@ -40,7 +40,7 @@ centos7系统
 
 * 在cloudflare配置worker开启CDN：
 
-先使用IP优选工具优选出一个IP
+先使用IP优选工具（下载地址：https://github.com/XIU2/CloudflareSpeedTest/releases优选出一个IP）
 然后在worker中添加一个新的woker：
 
 addEventListener(  
