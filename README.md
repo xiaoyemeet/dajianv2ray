@@ -39,17 +39,19 @@ centos7系统
 安装中需要核对时间，输入上述域名，安装完会直接给出vmess链接地址，复制到v2ray客户端中添加即可
 
 * 在cloudflare配置worker开启CDN：
+
 先使用IP优选工具优选出一个IP
 然后在worker中添加一个新的woker：
-addEventListener(
-"fetch",event => {
-let url=new URL(event.request.url);
-url.hostname="这里填上述域名";
-let request=new Request(url,event.request);
-event. respondWith(
-fetch(request)
-)
-}
-)
+
+addEventListener( 
+"fetch",event => {  
+let url=new URL(event.request.url); 
+url.hostname="这里填上述域名"; 
+let request=new Request(url,event.request); 
+event. respondWith( 
+fetch(request)  
+) 
+} 
+) 
 
 然后将该节点的地址改为cf的优选ip，伪装域名改为worker的地址，即可实现CDN加速！
