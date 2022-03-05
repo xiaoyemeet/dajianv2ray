@@ -44,14 +44,14 @@ centos7系统
 然后在worker中添加一个新的woker：
 
 addEventListener( 
-"fetch",event => {  
-let url=new URL(event.request.url); 
-url.hostname="这里填上述域名"; 
-let request=new Request(url,event.request); 
-event. respondWith( 
-fetch(request)  
-) 
-} 
-) 
+  "fetch",event => {  
+  let url=new URL(event.request.url); 
+  url.hostname="这里填上述域名"; 
+  let request=new Request(url,event.request); 
+  event. respondWith( 
+  fetch(request)  
+  ) 
+  } 
+  ) 
 
 然后将该节点的地址改为cf的优选ip，伪装域名改为worker的地址，即可实现CDN加速！
